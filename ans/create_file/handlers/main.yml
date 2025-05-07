@@ -1,0 +1,4 @@
+---
+- name: file info
+  debug:
+    msg: "File path: {{ created_file.dest }}, Contents: {{ file_content.stdout }}"

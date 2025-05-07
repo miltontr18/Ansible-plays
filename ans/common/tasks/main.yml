@@ -1,0 +1,9 @@
+---
+- name: Install zip and vim
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: true
+  loop: "{{pakg}}" # Read you can use loop to replace with_item.
+

@@ -1,0 +1,11 @@
+---
+- name: Create file with content
+  copy:
+    content: "My Ansible Playbook "
+    dest: /tmp/test1.txt
+  register: created_file
+
+- name: Read file content      # Implement this simply for the peace of mind.
+  shell: cat /tmp/test1.txt
+  register: file_content
+  notify: file info

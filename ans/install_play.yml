@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  roles:
+    - common
+    - challenge
+    - create_file
+   
+
+
+
+

@@ -1,0 +1,32 @@
+---
+- name: Installing dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop: "{{ dependencies }}"      # Read you can replace "with_item" with "loop" so trying it to loop through "dependencies" saved in "vars" folder.
+
+- name: Creating Docker GPG key directory     # Had no joy with the "apt_key" had to resort to the following 2 task as a replacement.
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+  become: yes
+
+- name: Downloading Docker GPG key using wget
+  shell: wget -O /etc/apt/keyrings/docker.asc https://download.docker.com/linux/ubuntu/gpg
+  become: yes
+  args:
+    creates: /etc/apt/keyrings/docker.asc
+
+- name: Adding Docker repo
+  apt_repository:
+    repo: "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+    state: present
+    update_cache: yes
+
+- name: Installing Docker
+  apt:
+    name: docker-ce
+    state: present
+  notify:
+    - start docker
