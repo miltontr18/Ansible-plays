@@ -25,7 +25,8 @@ This repository contains ansible roles to install packages on an ec2 instance.
 2. common - This is a role which consists of tasks and vars required to install Vim and Zip.
 3. create_file - Another role consisting of tasks and handlers required to create a /tmp file.
 4. Keys - A folder to store keys.
-5. 
+5. Hosts - File containing a list of inventory.
+
 
 ## Setup
 
