@@ -4,7 +4,7 @@ This repository contains ansible roles to install packages on an ec2 instance.
 
 ## Table of contents
 - [Pre-Requisites](#Pre-Requisites)
-- [File Breakedown](#File Breakdown)
+- [File-Breakedown](#File-Breakdown)
 - [Setup](#Setup)
 - [Usage](#Usage)
 
