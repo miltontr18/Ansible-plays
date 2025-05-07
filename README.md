@@ -17,7 +17,11 @@ This repository contains ansible roles to install packages on an ec2 instance.
 
 ## File_Breakdown
 
-1.
+1. Dockerfile - The dockerfile is one pulled from dgotlieb repo. creates a container running ansible on Ubuntu.
+2. ans - Is the folder containing the Plays, roles and inventory required to install applications on to a remote instance 
+### ans
+
+
 
 ## Setup
 
