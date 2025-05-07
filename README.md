@@ -26,6 +26,7 @@ This repository contains ansible roles to install packages on an ec2 instance.
 3. create_file - Another role consisting of tasks and handlers required to create a /tmp file.
 4. Keys - A folder to store keys.
 5. Hosts - File containing a list of inventory.
+6. Install-play - Is A .yml file runs playbooks for all 3 roles of can be use to run roles indevidually.
 
 
 ## Setup
