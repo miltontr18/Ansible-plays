@@ -11,7 +11,7 @@ This repository contains ansible roles to install packages on an ec2 instance.
 
 ## Pre-Requisites.
 
-1. Launch an Ubuntu ec2 instance on AWS with a (Key-pair).
+1. Launch an Ubuntu ec2 instance on AWS with a (Key).
 2. Start Docker desktop.
 3. Clone this Repository on to your machine.
 
