@@ -6,7 +6,7 @@
     update_cache: yes
   loop: "{{ dependencies }}"      # Read you can replace "with_item" with "loop" so trying it to loop through "dependencies" saved in "vars" folder.
 
-- name: Creating Docker GPG key directory     # Had no joy with the "apt_key" had to resort to the following 2 task as a replacement.
+- name: Creating Docker GPG key directory     # Had no joy with the "apt_key" had to resort to the following 2 tasks as a replacement.
   file:
     path: /etc/apt/keyrings
     state: directory

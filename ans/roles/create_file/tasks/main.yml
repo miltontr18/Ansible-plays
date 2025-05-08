@@ -5,7 +5,7 @@
     dest: /tmp/test1.txt
   register: created_file
 
-- name: Read file content      # Implement this simply for the peace of mind.
+- name: Read file content      # Implemented this simply for peace of mind.
   shell: cat /tmp/test1.txt
   register: file_content
   notify: file info
