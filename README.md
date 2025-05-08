@@ -17,8 +17,9 @@ This repository contains ansible roles to install packages on an ec2 instance.
 
 ## File_Breakdown
 
-1. Dockerfile - The dockerfile is one pulled from dgotlieb repo. creates a container running ansible on Ubuntu.
-2. ans - Is the folder containing the Plays, roles and inventory required to install applications on to a remote instance 
+1. Dockerfile - The dockerfile is one pulled from dgotlieb repo. The Docker file creates a container running ansible on Ubuntu.
+2. ans - This folder contains the Plays, roles, hosts and inventory required to install applications on to a remote instance 
+
 ### ans (contents)
 
 #### Roles
@@ -27,7 +28,7 @@ This is a role constisting of tasks, handlers and vars required to install docke
 - common -
 This is a role which consists of tasks and vars required to install Vim and Zip. The tasks/main.yml contains a task to install vim and zip the variables for vim and zip are located in the vars/main.yml
 
-- create_file -
+- create_file 
 Another role consisting of tasks and handlers required to create a /tmp file. In the task folder there are two tasks, the fist task created the tmp/test1.txt and the second one records the file path and file contents which is then pulled by the handlers/main.yml. The recording file path and msg part is something implemented as an extra to ensure the file location exits together with the contents.
 
 ### keys
